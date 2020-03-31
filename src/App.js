@@ -3,14 +3,16 @@ import { Route } from 'react-router-dom';
 import './App.css';
 
 // Components
-import Homepage from './components/Homepage';
 import Navigation from './components/Navigation';
+import Main from './components/Main';
+import Education from './components/Education';
 
 function App() {
   return (
     <div className="webContainer">
       <Navigation />
-      <Route exact path='/' component={Homepage}/>
+      <Main />
+      <Education />
     </div>
   );
 }
