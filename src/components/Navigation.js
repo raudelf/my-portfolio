@@ -15,19 +15,27 @@ const Navigation = () => {
 
                 <Link
                 activeClass='active'
-                to='education'
-                spy= {true}
-                smooth= {true}
-                offset= {0}
-                duration= {500}>Education</Link>
-                
-                <Link
-                activeClass='active'
                 to='projects'
                 spy= {true}
                 smooth= {true}
                 offset= {0}
                 duration= {500}>Projects</Link>
+
+                <Link
+                activeClass='active'
+                to='achievements'
+                spy= {true}
+                smooth= {true}
+                offset= {0}
+                duration= {500}>Achievements</Link>
+
+                <Link
+                activeClass='active'
+                to='education'
+                spy= {true}
+                smooth= {true}
+                offset= {0}
+                duration= {500}>Education</Link>
 
                 <Link
                 activeClass='active'
