@@ -2,7 +2,7 @@ import React from 'react';
 
 const Homepage = () => {
     return (
-        <div className='mainContainer' id='main'>
+        <div className='container mainContainer' id='main'>
             <header className='headline'>
                 <div className='title mainTitle'>
                     <h1>Raudel Flores</h1>
