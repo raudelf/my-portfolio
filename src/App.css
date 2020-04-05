@@ -4,13 +4,12 @@
   position: sticky;
 }
 
-.mainContainer {
+.container {
   height: 100vh;
+}
+
+.mainContainer {
   text-align: center;
   color: white;
   background-color: red;
-}
-
-.educationContainer {
-  height: 100vh;
 }
