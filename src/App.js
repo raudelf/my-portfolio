@@ -6,6 +6,8 @@ import './App.css';
 import Navigation from './components/Navigation';
 import Main from './components/Main';
 import Education from './components/Education';
+import Skills from './components/Skills';
+import Achievements from './components/Achievements';
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
       <Navigation />
       <Main />
       <Education />
+      <Skills />
+      <Achievements />
     </div>
   );
 }
