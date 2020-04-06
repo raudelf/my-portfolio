@@ -12,7 +12,7 @@ const Projects = () => {
             </section>
             <section className='splitHalf'>
                 <div className='projectLinks'>
-                    <NavLink active className='projectBtn' activeClassName='active' to='/foodie-fun'>
+                    <NavLink className='projectBtn' activeClassName='active' to='/foodie-fun'>
                         Foodie fun
                     </NavLink>
                 </div>
