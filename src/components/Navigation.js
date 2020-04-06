@@ -10,7 +10,7 @@ const Navigation = () => {
                 to='main'
                 spy= {true}
                 smooth= {true}
-                offset= {0}
+                offset= {-60}
                 duration= {500}>Main</Link>
 
                 <Link
@@ -18,7 +18,7 @@ const Navigation = () => {
                 to='projects'
                 spy= {true}
                 smooth= {true}
-                offset= {0}
+                offset= {-60}
                 duration= {500}>Projects</Link>
 
                 <Link
@@ -26,7 +26,7 @@ const Navigation = () => {
                 to='education'
                 spy= {true}
                 smooth= {true}
-                offset= {0}
+                offset= {-60}
                 duration= {500}>Education</Link>
 
                 <Link
@@ -34,7 +34,7 @@ const Navigation = () => {
                 to='skills'
                 spy= {true}
                 smooth= {true}
-                offset= {0}
+                offset= {-60}
                 duration= {500}>Skills</Link>
 
                 <Link
@@ -42,7 +42,7 @@ const Navigation = () => {
                 to='achievements'
                 spy= {true}
                 smooth= {true}
-                offset= {0}
+                offset= {-60}
                 duration= {500}>Achievements</Link>
 
                 <Link
@@ -50,7 +50,7 @@ const Navigation = () => {
                 to='contact'
                 spy= {true}
                 smooth= {true}
-                offset= {0}
+                offset= {-60}
                 duration= {500}>Contact</Link>
             </nav>
         </div>
