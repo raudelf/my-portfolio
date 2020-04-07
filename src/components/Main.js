@@ -1,19 +1,25 @@
 import React from 'react';
+import RF from './projects/assets/2019Logo.png';
 
 const Homepage = () => {
     return (
-        <div className='container mainContainer' id='main'>
-            <header className='headline'>
-                <div className='title mainTitle'>
-                    <h1>Raudel Flores</h1>
-                    <h3>Front End Engineer</h3>
+        <div className='container' id='main'>
+            <div className='mainContainer'>
+                <div className='logo'>
+                    <img classname='logoPNG' src={RF} alt='Logo of Raudel Flores'/>
                 </div>
-                <div className='summary'>
-                    <p>
-                    With a background in graphic design and love for computers, I am eager to transition into a software engineer role. My interest first sparked in high-school, but it was difficult to find an affordable school with a good web development program. With the help of Lambda School and my design skills, I’m eager to develop functional and clean-looking apps for end-users.
-                    </p>
-                </div>
-            </header>
+                <header className='headline'>
+                    <div className='title mainTitle'>
+                        <h1>Raudel Flores</h1>
+                        <h3>Front End Engineer</h3>
+                    </div>
+                    <div className='summary'>
+                        <p>
+                        With a background in graphic design and love for computers, Raudel is eager to transition into a software engineer role. His interest in code first started in high-school, but it was difficult to find an affordable school with a good web development program at the time. So, he went on to study design and earned his BFA at Dominican University. Now, with the help of Lambda School and his design skills, Raudel works to develop functional and clean-looking apps for end-users.
+                        </p>
+                    </div>
+                </header>
+            </div>
         </div>
     )
 };
