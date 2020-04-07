@@ -13,15 +13,15 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  /* Idea: filter: opacity(.3); */
+  transition: filter 0.3s;
+  filter: opacity(.3);
 }
-/*
-Idea:
 
 .navContainer:hover {
+  transition: filter 0.3s;
   filter: opacity(1);
 }
-*/
+
 .nav {
   width: 1000px;
   display: flex;
