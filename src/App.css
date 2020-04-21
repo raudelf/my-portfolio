@@ -46,10 +46,19 @@ h1 {
   color: #252525;
 }
 
+h2 {
+  font-size: 1.5em;
+  font-weight: bolder;
+}
+
 h3 {
   font-size: 1.2em;
   font-weight: bold;
   color: #1A579A;
+}
+
+strong {
+  font-weight: 560;
 }
 
 p {
@@ -62,6 +71,11 @@ p {
   margin: 0 auto;
   display: flex;
   align-items: center;
+}
+
+.sectionHeadline {
+  width: 100%;
+  height: 30%;
 }
 
 
@@ -92,4 +106,71 @@ p {
 
 .logo img {
   width: 200px;
+}
+
+/* Projects Conent */
+.projectsContainer {
+  flex-wrap: wrap;
+}
+
+.splitHalf {
+  height: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.projectLinks {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.projectLinks a{
+  text-decoration: none;
+  
+}
+
+.projectRoutes {
+  width: 60%;
+}
+
+/* Education Content */
+.educationContainer {
+  flex-wrap: wrap;
+}
+
+.schools {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Skills Content */
+.skillsContainer {
+  flex-wrap: wrap;
+}
+
+.skillBoxes {
+  height: 60%;
+}
+
+/* Achievements Content */
+.achievementsContainer {
+  flex-wrap: wrap;
+}
+
+.achieveBoxes {
+  height: 60%;
+}
+
+/* Contact Content */
+.contactContainer {
+  flex-wrap: wrap;
+}
+
+.contactContainer form {
+  height: 60%;
+  width: 100%;
+  text-align: center;
 }
