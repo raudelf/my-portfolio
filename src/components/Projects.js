@@ -15,9 +15,13 @@ const Projects = () => {
                     <NavLink className='projectBtn' activeClassName='active' to='/foodie-fun'>
                         Foodie fun
                     </NavLink>
+                    <NavLink className='projectBtn' activeClassName='active' to='/spotify-song-suggester'>
+                        Spotify Song Suggester
+                    </NavLink>
                 </div>
                 <div className='projectRoutes'>
                     <Route exact path='/foodie-fun' component={FoodieFun}/>
+                    <Route path='/spotify-song-suggester' />
                 </div>
             </section>
         </div>
