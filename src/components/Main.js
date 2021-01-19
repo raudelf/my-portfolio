@@ -6,7 +6,7 @@ const Homepage = () => {
     <div className="container" id="main">
       <div className="mainContainer">
         <div className="logo">
-          <img classname="logoPNG" src={RF} alt="Logo of Raudel Flores" />
+          <img className="logoPNG" src={RF} alt="Logo of Raudel Flores" />
         </div>
         <header className="headline">
           <div className="title mainTitle">
