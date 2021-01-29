@@ -2,7 +2,11 @@ import React, {useState} from 'react';
 import emailjs from 'emailjs-com';
 
 const Contact = () => {
-    const [err, setErr] = useState(false)
+    const [err, setErr] = useState({
+        error: false,
+        message: ''
+    })
+
     const [form, setForm] = useState({
         from_name: '',
         reply_to: '',
@@ -18,18 +22,30 @@ const Contact = () => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        emailjs.send('service_0q40sjk', 'template_q4e3eax', form, 'user_H4oGojaVAorpxbCZjGArT')
-        .then(res => {
-            console.log('SUCCESS: ', res)
-            setForm({
-                from_name: '',
-                reply_to: '',
-                message: ''
+        if (form.from_name === '' || form.reply_to === '' || form.message === '') {
+            setErr({
+                ...err,
+                error: true,
+                message: 'Please finish filling out the form'
             })
-        })
-        .catch(res => {
-            console.log('ERROR SENDING EMAIL: ', res)
-        })
+        } else {
+            setErr({
+                ...err,
+                error: false
+            })
+            emailjs.send('service_0q40sjk', 'template_q4e3eax', form, 'user_H4oGojaVAorpxbCZjGArT')
+            .then(res => {
+                console.log('SUCCESS: ', res)
+                setForm({
+                    from_name: '',
+                    reply_to: '',
+                    message: ''
+                })
+            })
+            .catch(res => {
+                console.log('ERROR SENDING EMAIL: ', res)
+            })
+        }
     }
     return (
         <div className='container contactContainer' id='contact'>
@@ -42,20 +58,24 @@ const Contact = () => {
                 placeholder='Name'
                 name='from_name'
                 onChange={handleChange}
-                value={form.from_name}/>
+                value={form.from_name}
+                required/>
                 <input
                 type='email'
                 placeholder='Email'
                 name='reply_to'
                 onChange={handleChange}
                 value={form.reply_to}
+                required
                 />
                 <textarea
                 placeholder='Message'
                 name='message'
                 onChange={handleChange}
-                value={form.message}/>
+                value={form.message}
+                required/>
                 <button className='emailBtn' onClick={handleSubmit}>Send Email</button>
+                {err.error ? <h3 className='errorMssg'>{err.message}</h3> : <div/>}
             </form>
 
         </div>
