@@ -1,24 +1,245 @@
-/* Container Styling */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
 
+/* Navigation Styling */
 .navContainer {
   width: 100%;
   height: 60px;
   top: 0;
-  background-color: black;
+  font-weight: bold;
+  background-color: #252525;
   color: white;
   position: sticky;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  transition: filter 0.3s;
+  filter: opacity(0.3);
+}
+
+.navContainer:hover {
+  transition: filter 0.3s;
+  filter: opacity(1);
+}
+
+.nav {
+  width: 1000px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.nav a {
+  padding: 2.2% 2%;
+  cursor: pointer;
+}
+
+.nav a:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Content */
+h1 {
+  font-size: 2em;
+  font-weight: 800;
+  color: #252525;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: bolder;
+}
+
+h3 {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #1a579a;
+}
+
+strong {
+  font-weight: 560;
+}
+
+p {
+  font-size: 18px;
 }
 
 .container {
   height: 100vh;
-  top: 0;
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.sectionHeadline {
+  width: 100%;
+  height: 5%;
+  display: flex;
+  align-items: center;
+}
+
+/* Main Content */
+#main {
+  align-items: center;
 }
 
 .mainContainer {
-  text-align: center;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.headline {
+  width: 50%;
+  height: 90%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mainTitle {
+  margin-bottom: 2%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 90%;
+}
+
+img {
+  width: 200px;
+}
+
+/* Projects Conent */
+.projectsContainer {
+  flex-wrap: wrap;
+}
+
+.splitHalf {
+  height: 60%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.projectLinks {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.projectBtn {
   color: white;
-  background-color: red;
+  width: 65%;
+  background-color: #1a579a;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 2% 0;
+  padding: 5%;
+  border-radius: 10px;
+}
+
+.projectBtn:hover {
+  color: #1a579a;
+  background-color: white;
+  border-style: inset;
+  transition: 0.3s;
+}
+
+.projectRoutes {
+  width: 60%;
+}
+
+.activeProject {
+  color: #1a579a;
+  background-color: white;
+  border-radius: 0;
+  border-bottom: 2px solid #1a579a;
+}
+
+/* Contact Content */
+.contactContainer {
+  flex-wrap: wrap;
+}
+
+.contactContainer form {
+  margin: 0 auto;
+  height: 60%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+form h2 {
+  margin-bottom: .8em;
+  color: #1a579a;
+}
+
+input {
+  margin: .8em auto;
+  height: 2em;
+  width: 50%;
+  border-radius: 10px;
+  border: .5px solid black;
+  font-size: 1.2em;
+  padding-left: .5em;
+  outline: none;
+}
+
+form input:focus {
+  border-color: #1a579a;
+  outline: none;
+}
+
+form textarea {
+  margin: .8em auto;
+  border-radius: 10px;
+  width: 50%;
+  height: 25%;
+  outline: none;
+  font-size: 1.5em;
+  padding-left: .5em;
+}
+
+form textarea:focus {
+  border-color: #1a579a;
+}
+
+form button {
+  margin: .8em auto;
+  color: white;
+  width: 25%;
+  background-color: #1a579a;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 2%;
+  border: none;
+  border-radius: 10px;
+}
+
+form button:hover {
+  color: #1a579a;
+  cursor: pointer;
+  background-color: white;
+  border-style: inset;
+  transition: 0.3s;
+  border: none;
+}
+
+.emailBtn {
+  font-size: 18px;
+  outline: none;
+}
+
+.errorMssg {
+  text-align: center;
+  color: #1a579a;
 }
