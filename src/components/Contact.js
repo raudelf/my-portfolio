@@ -4,6 +4,7 @@ import emailjs from 'emailjs-com';
 const Contact = () => {
     const [err, setErr] = useState({
         error: false,
+        success: false,
         message: ''
     })
 
@@ -14,6 +15,11 @@ const Contact = () => {
     })
 
     const handleChange = e => {
+        setErr({
+            ...err,
+            error: false,
+            success: false
+        })
         setForm({
             ...form,
             [e.target.name]: e.target.value 
@@ -29,13 +35,14 @@ const Contact = () => {
                 message: 'Please finish filling out the form'
             })
         } else {
-            setErr({
-                ...err,
-                error: false
-            })
             emailjs.send('service_0q40sjk', 'template_q4e3eax', form, 'user_H4oGojaVAorpxbCZjGArT')
             .then(res => {
                 console.log('SUCCESS: ', res)
+                setErr({
+                    ...err,
+                    success: true,
+                    message: 'Message Sent!'
+                })
                 setForm({
                     from_name: '',
                     reply_to: '',
@@ -44,15 +51,21 @@ const Contact = () => {
             })
             .catch(res => {
                 console.log('ERROR SENDING EMAIL: ', res)
+                setErr({
+                    ...err,
+                    error: true,
+                    message: 'Sorry, there was problem contacting the server. Please try again.'
+                })
             })
         }
     }
     return (
         <div className='container contactContainer' id='contact'>
             <section className='sectionHeadline'>
-                <h1>Get in Touch!</h1>
+                <h1>Contact Me</h1>
             </section>
             <form className='formContainer'>
+                <h2>Questions, comments, or just want to chat? Fill out the form below to get in touch with me, I'll respond as soon as I am available!</h2>
                 <input 
                 type='text'
                 placeholder='Name'
@@ -74,10 +87,9 @@ const Contact = () => {
                 onChange={handleChange}
                 value={form.message}
                 required/>
-                <button className='emailBtn' onClick={handleSubmit}>Send Email</button>
-                {err.error ? <h3 className='errorMssg'>{err.message}</h3> : <div/>}
+                <button className='emailBtn' onClick={handleSubmit}>Send</button>
+                {err.error || err.success ? <h3 className='errorMssg' style={{color: err.error ? 'red' : 'green'}}>{err.message}</h3> : <div/>}
             </form>
-
         </div>
     );
 };
