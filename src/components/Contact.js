@@ -32,7 +32,7 @@ const Contact = () => {
             setErr({
                 ...err,
                 error: true,
-                message: 'Please finish filling out the form'
+                message: 'Please finish filling out the form.'
             })
         } else {
             emailjs.send('service_0q40sjk', 'template_q4e3eax', form, 'user_H4oGojaVAorpxbCZjGArT')
