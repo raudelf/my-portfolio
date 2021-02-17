@@ -1,16 +1,24 @@
 import React from  'react';
 import thumbnail from './assets/foodie-fun.jpg';
 
-const Foodiefun = () => {
+const Foodiefun = props => {
     return (
-        <section className='foodieFun'>
+        <section className='projectContent foodieFun' style={{display: props.proj != 'foodie' ? 'none' : ''}}>
                 <div className='projImg'>
                     <a href='https://raudelf.github.io/Marketing-Page/' target='_blank'>
-                        <img src={thumbnail} alt='Snapshot of a website I worked on' style={{maxWidth: 400}}/>
+                        <img src={thumbnail} alt='Snapshot of the Foodie Fun website' style={{maxWidth: 400}}/>
                     </a>
                 </div>
                 <h2>FoodieFun</h2>
-                <p>A marketing landing page built in collaboration with a UX Designer. This was one of Raudel's first collaboration projects with a full dev team. The landing page was for an app that food enthusiasts can use to save their favorite dishes from local restaurants.</p>
+                <p>For this project I teamed up with a UX designer to create a landing page for an application that allows users to record their experiences at restaurants. The app also allowed user to share these experiences with their future selves and others. For the most part, the page is made up of HTML and CSS / LESS while following brand guidelines established by the UX designer. The page also includes a responsive design for a good user experience on both mobile and desktop users.</p>
+                <div className='redirectBtn'>
+                    <a href='https://github.com/raudelf/Marketing-Page' target='_blank'>
+                        <button>Github Repo</button>
+                    </a>
+                    <a href='https://raudelf.github.io/Marketing-Page/' target='_blank'>
+                        <button>Live Website</button>
+                    </a>
+                </div>
         </section>
     );
 };
